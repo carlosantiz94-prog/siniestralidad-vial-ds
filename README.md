@@ -45,7 +45,7 @@ siniestralidad-vial-ds/
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/<tu-usuario>/siniestralidad-vial-ds.git
+git clone https://github.com/<carlosantiz94-prog>/siniestralidad-vial-ds.git
 cd siniestralidad-vial-ds
 
 # 2. Crear y activar el entorno virtual
