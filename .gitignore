@@ -16,6 +16,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Datos procesados (se regeneran)
-data/processed/*
-!data/processed/.gitkeep
+# Datos procesados grandes (se regeneran ejecutando notebooks/pandas_labs.ipynb)
+data/processed/lesiones_clean.csv
