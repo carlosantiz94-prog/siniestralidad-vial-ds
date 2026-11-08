@@ -31,9 +31,9 @@ siniestralidad-vial-ds/
 │   │   └── sectores_criticos_siniestralidad_vial.csv
 │   └── processed/                # Datos limpios (siguiente etapa)
 ├── notebooks/
-│   └── diagnostico_calidad.ipynb # Notebook del diagnóstico
+│   └── data_quality.ipynb # Notebook del diagnóstico
 └── reports/
-    └── informe_diagnostico.md    # Informe técnico
+    └── data_quality.md    # Informe técnico
 ```
 
 ## Requisitos
@@ -59,13 +59,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 4. Abrir el notebook
-jupyter notebook notebooks/diagnostico_calidad.ipynb
+jupyter notebook notebooks/data_quality.ipynb
 ```
 
 En Jupyter, ejecutar **Kernel → Restart & Run All**. También se puede ejecutar sin abrir Jupyter:
 
 ```bash
-jupyter nbconvert --to notebook --execute --inplace notebooks/diagnostico_calidad.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/data_quality.ipynb
 ```
 
 ## Resultados principales
@@ -74,7 +74,7 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/diagnostico_calida
 - **Sectores críticos:** las coordenadas y métricas usan coma decimal y se leen como texto. Hay faltantes ocultos (`<Null>` en 55 % de `ID_MT`, `sd` en 13 % de `PR`), nulos en `Nombre` y `Tramo`, y 4 pares de coordenadas repetidas.
 - **Ambos:** los nombres de departamento difieren por tildes, así que el cruce debe hacerse por código DIVIPOLA.
 
-El detalle completo está en [`reports/informe_diagnostico.md`](reports/informe_diagnostico.md).
+El detalle completo está en [`reports/data_quality.md`](reports/data_quality.md).
 
 ## Autor
 
