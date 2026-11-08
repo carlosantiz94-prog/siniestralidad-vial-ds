@@ -3,7 +3,7 @@
 **Actividad:** GA1-220501094-01-AA1-EV05 – Diagnosticar la calidad de datos: preparación, exploración y documentación
 **Proyecto:** Análisis de la siniestralidad vial en Colombia
 **Herramientas:** Python 3 · Pandas · Jupyter Notebook
-**Notebook de soporte:** [`notebooks/diagnostico_calidad.ipynb`](../notebooks/diagnostico_calidad.ipynb)
+**Notebook de soporte:** [`notebooks/data_quality.ipynb`](../notebooks/data_quality.ipynb)
 
 ---
 

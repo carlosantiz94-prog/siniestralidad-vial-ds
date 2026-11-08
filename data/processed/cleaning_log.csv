@@ -1,0 +1,19 @@
+dataset,paso,filas_antes,filas_despues,valores_afectados,descripcion
+lesiones,1. Renombrar columnas,644042,644042,6,Nombres a snake_case en español
+lesiones,2. Convertir fecha,644042,644042,644042,texto -> datetime64; NaT: 0
+lesiones,3. Códigos DIVIPOLA,644042,644042,80832,int -> texto con zfill(2)/zfill(5)
+lesiones,4. Normalizar texto,644042,644042,585,"strip, mayúsculas, espacios y tildes"
+lesiones,5. Nulos ocultos,644042,644042,14,'SIN ESTABLECER' -> NaN
+lesiones,6. Variables de fecha,644042,644042,5,"anio, mes, nombre_mes, dia_semana, anio_parcial"
+lesiones,7. Marcar atípicos,644042,644042,638,"cantidad > percentil 99,9 (21)"
+lesiones,8. Duplicados,644042,644042,294354,Se conservan: sin ID de víctima no son errores
+lesiones,9. Tipos categóricos,644042,644042,4,texto repetitivo -> category
+sectores,1. Renombrar columnas,316,316,13,snake_case; divipola -> cod_muni
+sectores,2. Nulos ocultos,316,316,217,'<Null>' y 'sd' -> NaN
+sectores,3. Tipos numéricos,316,316,1580,"gi_zscore, gi_pvalue, latitud, longitud, pr -> float"
+sectores,4. Código DIVIPOLA,316,316,43,cod_muni zfill(5) y nuevo cod_depto
+sectores,5. Normalizar texto,316,316,555,"tildes, mayúsculas, espacios dobles, '*' en tramo"
+sectores,6. Imputar texto faltante,316,316,198,tramo/nombre nulos -> 'SIN TRAMO'/'SIN NOMBRE'
+sectores,7. Duplicados por coordenadas,316,312,4,Se conserva el punto con mayor gi_zscore
+sectores,8. Nivel de confianza,312,312,312,gi_pvalue -> 99% / 95% / 90%
+sectores,9. Tipos categóricos,312,312,1,entidad -> category
