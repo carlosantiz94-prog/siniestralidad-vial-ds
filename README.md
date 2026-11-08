@@ -65,7 +65,7 @@ siniestralidad-vial-ds/
 
 ```bash
 # 1. Clonar el repositorio y entrar a la rama de trabajo
-git clone https://github.com/<tu-usuario>/siniestralidad-vial-ds.git
+git clone https://github.com/carlosantiz94-prog/siniestralidad-vial-ds.git
 cd siniestralidad-vial-ds
 git switch develop
 
