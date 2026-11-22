@@ -51,9 +51,10 @@ siniestralidad-vial-ds/
 ├── notebooks/
 │   ├── data_quality.ipynb      # EV05
 │   └── pandas_labs.ipynb       # EV06
+    └── data_preparation.ipynb  # EV07
 └── reports/
     ├── data_quality.md         # EV05
-    └── data_processing.md      # EV06
+    └── data_processing.md      # EV06 / EV07
 ```
 
 ## Requisitos
@@ -107,6 +108,12 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/pandas_labs.ipynb
 - **Limpieza:** no se pierde ningún lesionado (885.829 en total). Los duplicados se conservan porque eliminarlos haría perder el 33,4 %. En sectores se eliminan 4 puntos repetidos (316 → 312).
 - **Análisis:** el pico es 2016 y el mínimo reciente 2020. El domingo es el día con más lesionados. Seis departamentos suman más de la mitad del total. Enero–septiembre 2026 tiene 11 % más lesionados que el mismo periodo de 2025.
 - **Combinación:** la tabla por municipio está validada (sin duplicados ni pérdidas). Los 312 sectores se asignan por código DIVIPOLA, y 3 municipios se habrían perdido si se cruzara por nombre.
+
+**EV07 – Preparación del proyecto individual:**
+
+**Pipelines (pipe()):** normalización de textos sin tildes (unicodedata), conversión de fechas y decimales con coma, imputación de nulos y validaciones automáticas con assert.
+
+**Enfoque Medellín y Valle de Aburrá:** aislamiento de 28.311 registros en Medellín (cod_muni == 5001), cálculo de distribución semanal, evolución 2021–2026 y cruce relacional (merge()) de sectores críticos en los municipios del Área Metropolitana (Bello, Copacabana, Girardota y Barbosa).
 
 ## Autor
 
