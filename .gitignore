@@ -1,20 +1,6 @@
-# Entorno virtual
 .venv/
-venv/
-env/
-
-# Python
 __pycache__/
-*.py[cod]
-
-# Jupyter
 .ipynb_checkpoints/
-
-# Sistema operativo / editores
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Datos procesados grandes (se regeneran ejecutando notebooks/pandas_labs.ipynb)
-data/processed/lesiones_clean.csv
+data/*.csv
+data/raw/*.csv
+!data/processed/*.csv
